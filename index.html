@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
       rel="stylesheet"
@@ -21,12 +23,8 @@
   </head>
   <body>
     <!-- --------------res start------------------ -->
-    <!-- <div class="res-header">
-      <img src="./photos/res-img.png" alt="img">
-      <img src="./photos/res-img.png" alt="img">
-
-    </div> -->
-        <!-- --------------res end------------------ -->
+    <div class="timeout"><img src="./photos/ads.jpg" alt="ads"></div>
+    <!-- --------------res end------------------ -->
 
             <!-- --------------nav start------------------ -->          
               <div class="topnav">
@@ -39,7 +37,7 @@
                     <li class="nav-li"><a href="#service"> SERVICES</a></li>
                     <li class="nav-li"><a href="./onlineShop.html">ONLINE SHOP</a></li>
                     <li class="nav-li"><a href="./contactus.html">CONTACT US</a></li>
-                    <li class="nav-li login">Sign in / Sign up</li>
+                    <li class="nav-li logine">Sign in / Sign up</li>
                   </ul>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="burgerToggler()">
@@ -391,6 +389,23 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <!-- --------------go-top end------------------ -->
+        <!-- --------------login start------------------ -->
+    <div class="valid-sec">
+      <div class="valid-form">
+        <div><i class="fas fa-times-circle exit"></i></div>
+        <h2 class="subtitle">SIGN IN</h2>
+        <div class="beard"></div>
+        <form class="validation" action="validation">
+          <input class="valid-name validation-form" type="text" placeholder="NAME" name="name">
+          <input class="valid-surename validation-form" type="text" placeholder="SURENAME" name="surename">
+          <input class="valid-tel validation-form" type="tel" placeholder="EX. +37455555555" name="phoneNumber">
+          <input class="valid-email validation-form" type="email" placeholder="EMAIL" name="email">
+          <button class="btn but last" >SUBMIT</button>    
+         </form>
+      </div>
+    </div>
+        <!-- --------------login end------------------ -->
+
 
     <script src="index.js"></script>
   </body>
