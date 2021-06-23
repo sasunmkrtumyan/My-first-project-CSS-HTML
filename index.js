@@ -167,7 +167,6 @@ let observerPricing = new IntersectionObserver(callbackPricing, options);
 observer.observe(barber);
 observerPricing.observe(pricing);
 
-
 function burgerToggler() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -176,3 +175,70 @@ function burgerToggler() {
     x.style.display = "block";
   }
 }
+
+const login = document.querySelector(".login");
+const modal = document.querySelector(".valid-sec");
+const exit = document.querySelector(".exit");
+login.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+exit.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+const name = document.querySelector(".valid-name");
+name.addEventListener("click", () => {
+  name.classList.add("valid-required");
+});
+name.addEventListener("input", (e) => {
+  if (name.value.length > 2) {
+    name.classList.add("valid-passed");
+  } else name.classList.remove("valid-passed");
+});
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+const surename = document.querySelector(".valid-surename");
+surename.addEventListener("click", () => {
+  surename.classList.add("valid-required");
+});
+surename.addEventListener("input", (e) => {
+  if (surename.value.length > 2) {
+    surename.classList.add("valid-passed");
+  } else surename.classList.remove("valid-passed");
+});
+
+const phoneValitation = /[+374]{4}[1-9]{2}\d{6}/g;
+const validTel = document.querySelector(".valid-tel");
+validTel.addEventListener("click", () => {
+  validTel.classList.add("valid-required");
+});
+validTel.addEventListener("input", (e) => {
+  if (e.target.value.match(phoneValitation)) {
+    validTel.classList.add("valid-passed");
+  } else validTel.classList.remove("valid-passed");
+});
+
+const mailValidation = /\S+@\S+\.\S+/;
+const validMail = document.querySelector(".valid-email");
+validMail.addEventListener("click", () => {
+  validMail.classList.add("valid-required");
+});
+validMail.addEventListener("input", (e) => {
+  if (e.target.value.match(mailValidation)) {
+    validMail.classList.add("valid-passed");
+  } else validMail.classList.remove("valid-passed");
+});
+
+const timeout = document.querySelector(".timeout");
+const intervalFunction = function () {
+  timeout.style.display = "block";
+  setTimeout(() => {
+    timeout.style.display = "none";
+  }, 5000);
+};
+const timer = setTimeout(intervalFunction, 5000);
